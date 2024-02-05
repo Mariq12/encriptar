@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles.css">
+        <title>Encriptador/Desencriptador</title>
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+            integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        >
+    </head>
+    <body>
+        <header>
+            <div class="header-content">
+                <img src="imagenes/logo.png" alt="Logo" class="logo">
+                <h1>Encriptador/Desencriptador</h1>
+            </div>
+        </header>
+        <div class="container">
+            <div class="left-half">
+                <main>
+                    <div class="input-container">
+                        <label id="text-input-label" for="text-input">Texto:</label>
+                        <input type="text" id="text-input" placeholder="Introduce tu texto">
+                    </div>
+                    <p>
+                        <i class="fa-solid fa-circle-info"></i>
+                        Solo letras minúsculas y sin acentos
+                    </p>
+                    <button onclick="encryptText()">Encriptar</button>
+                    <button onclick="decryptText()">Desencriptar</button>
+                </main>
+            </div>
+            <div class="separator">
+                <div class="right-half">
+                    <main>
+                        <div class="result-container">
+                            <label for="result">Resultado:</label>
+                            <textarea id="result" readonly></textarea>
+                            <img id="no-result-img" src="imagenes/Muñeco.png" alt="No hay resultados">
+                            <h2 id="no-result-text">Ningún mensaje fue encontrado</h2>
+                            <h4 id="no-result-text-h4">Ingresa el texto que desees encriptar o desencriptar.</h4>
+                        </div>
+                        <button id="copy-button" onclick="copyToClipboard()">Copiar</button>
+                    </main>
+                    
+                </div>
+                
+            </div>
+        </div>
+        <script src="script.js"></script>
+        <footer>
+            <p>Desarrollado por Flor María Labanda P. - 2024</p>
+        </footer>
+    </body>
+</html>

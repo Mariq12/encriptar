@@ -1,0 +1,184 @@
+body {
+    background-color: #f5cfd5;
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    max-width: 1000px; /* Ajusta el ancho total según sea necesario */
+    margin: 50px auto;
+}
+
+.left-half,
+.right-half {
+    width: 95%;
+    height: 80%;
+}
+
+.right-half {
+    background-color: #fff;
+    padding: 10px;
+}
+
+header {
+    padding: 10px;
+    text-align: center;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    max-width: 80px;
+}
+
+h1 {
+    margin: 0;
+    color: rgb(212, 47, 193);
+    flex: 1;
+    font-size: 25px;
+}
+
+main {
+    margin-top: 20px;
+}
+
+.input-container,
+.result-container {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input,
+textarea {
+    width: calc(100% - 16px);
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.input-container input {
+    width: 70%; /* Ajusta el ancho del campo de entrada según sea necesario */
+}
+
+#copy-button {
+    background-color: #4e4caf;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    margin-top: 10px;
+    margin-right: auto; /* Establecer margen derecho automático */
+    margin-left: auto; /* Establecer margen izquierdo automático */
+    width: 120px;
+    display: block; /* Para que ocupe el ancho máximo disponible */
+}
+
+p {
+    font-size: 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 160px;
+    margin-right: 10px;
+    margin-left: 20px;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    margin-top: 10px;
+    margin-right: 10px;
+    margin-left: 20px;
+    width: 120px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.icon {
+    margin-right: 15px; /* Ajusta el espacio entre el ícono y el texto según sea necesario */
+    color: #3d3d3d; /* Cambia el color según sea necesario */
+    font-size: 18px; /* Ajusta el tamaño del ícono según sea necesario */
+}
+
+
+textarea {
+    height: 100px;
+}
+
+.result-container button {
+    position: relative;
+    top: -20px; /* Ajusta según sea necesario, posición relativa para subir */
+}
+
+.result-container {
+    position: relative;
+    height: calc(87vh - 170px); /* Reducir el espacio total */
+    margin-top: 10px; /* Ajusta según sea necesario */
+}
+
+#no-result-img {
+    max-height: 25%; /* Ajusta según sea necesario */
+    display: none;
+    margin: 0 auto;
+}
+
+#no-result-text {
+    font-size: 20px;
+    text-align: center;
+}
+
+#no-result-text-h4 {
+    font-size: 14px;
+    text-align: center;
+}
+
+#result-container {
+    position: relative;
+    overflow: hidden; /* Oculta el desbordamiento de la imagen */
+}
+
+#result {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#result:empty + #no-result-img {
+    display: block;
+}
+
+footer {
+    text-align: center;
+    font-family: sans-serif;
+    width: 100%;
+    bottom: 0;
+    position:fixed;
+
+}
+
+footer p {
+    margin: 0;
+    padding: 20px 0 0 0;
+    background-color: black;
+    color: #fff;
+    height: 30px;
+    margin-top: 20px;
+}
