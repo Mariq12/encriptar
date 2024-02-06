@@ -13,7 +13,7 @@ body {
 .left-half,
 .right-half {
     width: 95%;
-    height: 80%;
+    height: 85%;
 }
 
 .right-half {
@@ -96,21 +96,22 @@ p {
     margin-left: 20px;
 }
 
-button {
-    background-color: #4CAF50;
-    color: white;
-    padding: 10px 15px;
+.container__boton {
+    border-radius: 16px;
+    background: #1875E8;
+    padding: 16px 16px;
+    width: 45%;
+    font-size: 15px;
+    font-weight: 700;
     border: none;
-    border-radius: 15px;
-    cursor: pointer;
-    margin-top: 10px;
-    margin-right: 10px;
-    margin-left: 20px;
-    width: 120px;
+    margin-top: 1rem;
 }
 
-button:hover {
-    background-color: #45a049;
+.container__boton:disabled {
+    background: #898989;
+}
+#copy-button {
+    display: none;
 }
 
 .icon {
