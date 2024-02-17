@@ -121,9 +121,11 @@ p {
     font-size: 18px; /* Ajusta el tamaño del ícono según sea necesario */
 }
 
-textarea {
-    height: 100px;
-}
+/*textarea {
+    height: 25px;
+    width: 100%;
+    box-sizing: border-box;
+}*/
 
 .result-container button {
     position: relative;
@@ -158,6 +160,7 @@ textarea {
 }
 
 #result {
+    height: 25px;
     width: 100%;
     box-sizing: border-box;
 }

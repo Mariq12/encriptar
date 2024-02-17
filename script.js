@@ -2,6 +2,61 @@ function encryptText() {
   let textInput = document.getElementById("text-input").value;
 
   // Verificar si hay tildes en el texto
+  if (/[áéíóúü]/.test(textInput)) {
+    if (
+      confirm(
+        "Se han detectado tildes en el texto. ¿Desea modificar el texto para eliminarlas?"
+      )
+    ) {
+      // Eliminar las tildes del texto
+      textInput = textInput.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+      document.getElementById("text-input").value = textInput; // Cambiar el texto del cuadro de texto
+
+      alert("Se han eliminado las tildes del texto.");
+    } else {
+      return; // Salir de la función si el usuario no desea modificar el texto
+    }
+  }
+
+  // Verificar si hay mayúsculas en el texto
+  if (/[A-Z]/.test(textInput)) {
+    if (
+      confirm(
+        "Se han detectado mayúsculas en el texto. ¿Desea modificar el texto para convertirlo a minúsculas?"
+      )
+    ) {
+      // Convertir mayúsculas a minúsculas
+      textInput = textInput.toLowerCase();
+      document.getElementById("text-input").value = textInput; // Cambiar el texto del cuadro de texto
+
+      alert("Se han convertido las mayúsculas a minúsculas.");
+    } else {
+      return;
+    }
+  }
+
+  // Realizar la encriptación con el texto sin tildes y en minúsculas
+  let result = encrypt(textInput.toLowerCase());
+  document.getElementById("result").value = result;
+
+  // Mostrar el resultado y ocultar la imagen y los textos
+  document.getElementById("resultado").style.display = "block";
+  document.getElementById("result").style.display = "block";
+  document.getElementById("no-result-img").style.display = "none";
+  document.getElementById("no-result-text").style.display = "none";
+  document.getElementById("no-result-text-h4").style.display = "none";
+
+  //document.getElementById("result-container").style.display = "block";
+  // Habilitar el botón Desencriptar
+  habilitarDesencriptar(true);
+  // Mostrar u ocultar el botón de copiar
+  mostrarOcultarBotonCopiar();
+}
+
+/*function encryptText() {
+  let textInput = document.getElementById("text-input").value;
+
+  // Verificar si hay tildes en el texto
   if(/[áéíóúü]/.test(textInput)) {
     if (confirm("Se han detectado tildes en el texto. ¿Desea modificar el texto para eliminarlas?")) {
       // Eliminar las tildes del texto
@@ -38,7 +93,7 @@ function encryptText() {
   // Mostrar u ocultar el botón de copiar
   mostrarOcultarBotonCopiar();
 }
-
+*/
 function decryptText() {
   const textInput = document.getElementById("text-input").value.toLowerCase();
   let result = decrypt(textInput);
