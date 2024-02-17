@@ -11,14 +11,14 @@
   mostrarOcultarBotonCopiar();
 }
 */
-/*function decryptText() {
+function decryptText() {
   const textInput = document.getElementById("text-input").value.toLowerCase();
   let result = decrypt(textInput);
   document.getElementById("result").value = result;
 
   // Mostrar el resultado y ocultar la imagen y los textos
   mostrarResultado();
-}*/
+}
 
 function habilitarDesencriptar(habilitar) {
   const desencriptarButton = document.getElementById("desencriptar");
