@@ -2,6 +2,58 @@ function encryptText() {
   let textInput = document.getElementById("text-input").value;
 
   // Verificar si hay tildes en el texto
+  if (/[áéíóúüÁÉÍÓÚÜ]/.test(textInput)) {
+    alert("No deben ser utilizados letras con acentos.");
+    document.getElementById("text-input").value = ""; // Borrar el contenido del cuadro de texto
+    return;
+  }
+
+  // Verificar si hay caracteres especiales en el texto
+  if (/[^a-zA-Z0-9\s]/.test(textInput)) {
+    alert("No deben ser utilizados caracteres especiales.");
+    document.getElementById("text-input").value = ""; // Borrar el contenido del cuadro de texto
+    return;
+  }
+
+  // Verificar si hay mayúsculas en el texto
+  if (/[A-Z]/.test(textInput)) {
+    if (
+      confirm(
+        "Se han detectado mayúsculas en el texto. ¿Desea modificar el texto para convertirlo a minúsculas?"
+      )
+    ) {
+      // Convertir mayúsculas a minúsculas
+      textInput = textInput.toLowerCase();
+      document.getElementById("text-input").value = textInput; // Cambiar el texto del cuadro de texto
+
+      alert("Se han convertido las mayúsculas a minúsculas.");
+    } else {
+      return;
+    }
+  }
+
+  // Realizar la encriptación con el texto sin tildes y en minúsculas
+  let result = encrypt(textInput.toLowerCase());
+  document.getElementById("result").value = result;
+
+  // Mostrar el resultado y ocultar la imagen y los textos
+  document.getElementById("resultado").style.display = "block";
+  document.getElementById("result").style.display = "block";
+  document.getElementById("no-result-img").style.display = "none";
+  document.getElementById("no-result-text").style.display = "none";
+  document.getElementById("no-result-text-h4").style.display = "none";
+
+  // Mostrar el botón de copiar
+  mostrarOcultarBotonCopiar();
+  // Habilitar el botón Desencriptar
+  habilitarDesencriptar(true);
+}
+
+
+/*function encryptText() {
+  let textInput = document.getElementById("text-input").value;
+
+  // Verificar si hay tildes en el texto
   if (/[áéíóúü]/.test(textInput)) {
     if (
       confirm(
@@ -51,7 +103,7 @@ function encryptText() {
   // Habilitar el botón Desencriptar
   habilitarDesencriptar(true);
 }
-
+*/
 
 /*function encryptText() {
   let textInput = document.getElementById("text-input").value;
