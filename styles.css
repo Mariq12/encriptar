@@ -19,7 +19,7 @@ body {
 
 /* Estilos para el lado izquierdo */
 .left-half {
-    width: calc(100% - 250px); /* Restamos el ancho del right-half */
+    width: calc(100% - 100px); /* Restamos el ancho del right-half */
     padding-right: 5px; /* Margen separado del right-half */
 }
 
@@ -86,20 +86,6 @@ textarea {
     width: 70%; /* Ajusta el ancho del campo de entrada según sea necesario */
 }
 
-#copy-button {
-    background-color: rgb(212, 47, 193);
-    color: white;
-    padding: 10px 15px;
-    border: none;
-    border-radius: 15px;
-    cursor: pointer;
-    margin-top: 10px;
-    margin-right: auto; /* Establecer margen derecho automático */
-    margin-left: auto; /* Establecer margen izquierdo automático */
-    width: 100px;
-    display: block; /* Para que ocupe el ancho máximo disponible */
-}
-
 p {
     font-size: 12px;
     border: none;
@@ -129,14 +115,15 @@ p {
     color: white;
     margin-left: 10px; /* Ajusta el espacio a la izquierda del botón */
     margin-right: 0; /* Elimina el espacio a la derecha del botón */
+    transition: background-color 0.3s ease; /* Agregar transición */
+}
+
+.container__boton:hover {
+    background-color: #9c27b0; /* Cambiar color al pasar el cursor */
 }
 
 .container__boton:disabled {
     background: #898989;
-}
-
-#copy-button {
-    display: none;
 }
 
 .icon {
@@ -144,12 +131,6 @@ p {
     color: #3d3d3d; /* Cambia el color según sea necesario */
     font-size: 18px; /* Ajusta el tamaño del ícono según sea necesario */
 }
-
-/*textarea {
-    height: 25px;
-    width: 100%;
-    box-sizing: border-box;
-}*/
 
 .result-container button {
     position: relative;
@@ -191,6 +172,29 @@ p {
 
 #result:empty + #no-result-img {
     display: block;
+}
+
+#copy-button {
+    background-color: rgb(212, 47, 193);
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 10px;
+    margin-right: auto; /* Establecer margen derecho automático */
+    margin-left: auto; /* Establecer margen izquierdo automático */
+    width: 35%;
+    display: block; /* Para que ocupe el ancho máximo disponible */
+    transition: background-color 0.3s ease; /* Agregar transición */
+}
+
+#copy-button:hover {
+    background-color: #9c27b0; /* Cambiar color al pasar el cursor */
+}
+
+#copy-button {
+    display: none;
 }
 
 footer {
