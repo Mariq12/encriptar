@@ -2,10 +2,20 @@ function encryptText() {
   let textInput = document.getElementById("text-input").value;
 
   // Verificar si hay tildes en el texto
-  if (/[áéíóúüÁÉÍÓÚÜ]/.test(textInput)) {
-    alert("No deben ser utilizados letras con acentos.");
-    document.getElementById("text-input").value = ""; // Borrar el contenido del cuadro de texto
-    return;
+  if (/[áéíóúü]/i.test(textInput)) {
+    if (
+      confirm(
+        "Se han detectado tildes en el texto. ¿Desea modificar el texto para eliminarlas?"
+      )
+    ) {
+      // Eliminar las tildes del texto
+      textInput = textInput.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+      document.getElementById("text-input").value = textInput; // Cambiar el texto del cuadro de texto
+
+      alert("Se han eliminado las tildes del texto.");
+    } else {
+      return; // Salir de la función si el usuario no desea modificar el texto
+    }
   }
 
   // Verificar si hay caracteres especiales en el texto
@@ -48,7 +58,6 @@ function encryptText() {
   // Habilitar el botón Desencriptar
   habilitarDesencriptar(true);
 }
-
 
 /*function encryptText() {
   let textInput = document.getElementById("text-input").value;
