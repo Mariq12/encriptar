@@ -286,9 +286,9 @@ footer p {
     #result {
         position: fixed;
         bottom: 150px;
-        margin-right: 0px;
+        margin-right: 55px;
         margin-left: auto;
-        width: 80%;
+        width: 75%;
         box-sizing: border-box;
         margin-bottom: 10px; /* Añadido para separar el cuadro de texto del botón */
     }
