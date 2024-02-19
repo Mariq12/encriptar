@@ -303,7 +303,7 @@ footer p {
         margin-top: 10px;
         margin-right: auto; /* Establecer margen derecho automático */
         margin-left: auto; /* Establecer margen izquierdo automático */
-        width: 35%;
+        width: 95%;
         display: block; /* Para que ocupe el ancho máximo disponible */
         transition: background-color 0.3s ease; /* Agregar transición */
     }

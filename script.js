@@ -127,6 +127,19 @@ function copyToClipboard() {
   resultTextArea.select();
   document.execCommand("copy");
 }
+// Función para verificar si se aplica la media query
+function checkMediaQuery() {
+  if (window.matchMedia("(max-width: 768px) and (max-height: 1174px)").matches) {
+      document.getElementById("copy-button").style.display = "none";
+  } else {
+      document.getElementById("copy-button").style.display = "block";
+  }
+}
+
+// Ejecutar la función al cargar la página y al cambiar el tamaño de la ventana
+window.onload = checkMediaQuery;
+window.addEventListener("resize", checkMediaQuery);
+
 
 function mostrarResultado() {
   // Ocultar la imagen y los textos
