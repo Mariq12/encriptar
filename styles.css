@@ -392,29 +392,28 @@ footer p {
 
     #resultado {
         position: fixed;
-        bottom: 190px;
+        bottom: 240px;
         font-weight: bold;
         margin-bottom: 10px; /* Añadido para separar el texto del cuadro de texto */
     }
 
     #result {
         position: fixed;
-        bottom: 150px;
+        bottom: 195px;
         margin-right: 30%;
         margin-left: 0%;
         width: 70%;
         box-sizing: border-box;
-        margin-bottom: 10px; /* Añadido para separar el cuadro de texto del botón */
+        margin-bottom: 20px; /* Añadido para separar el cuadro de texto del botón */
     }
 
     #copy-button {
         background-color: rgb(212, 47, 193);
         color: white;
-        padding: 15px;
+        padding: 10px;
         border: none;
         border-radius: 10px;
         cursor: pointer;
-        margin-top: 10px;
         margin-right: auto; /* Establecer margen derecho automático */
         margin-left: auto; /* Establecer margen izquierdo automático */
         width: 95%;
