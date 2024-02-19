@@ -1,3 +1,7 @@
+window.onload = function() {
+  toggleCopyButtonVisibility(); // Llamar a la función cuando se carga la página
+};
+
 function encryptText() {
   let textInput = document.getElementById("text-input").value;
 
@@ -57,6 +61,20 @@ function encryptText() {
   mostrarOcultarBotonCopiar();
   // Habilitar el botón Desencriptar
   habilitarDesencriptar(true);
+  // Luego de encriptar, mostrar u ocultar el botón de copiar según el tamaño de la pantalla
+  toggleCopyButtonVisibility();
+}
+
+function toggleCopyButtonVisibility() {
+  const copyButton = document.getElementById("copy-button");
+  const screenWidth = window.innerWidth;
+  const screenHeight = window.innerHeight;
+
+  if (screenWidth <= 768 && screenHeight <= 1174) {
+      copyButton.style.display = "block"; // Mostrar el botón de copiar
+  } else {
+      copyButton.style.display = "none"; // Ocultar el botón de copiar
+  }
 }
 
 function decryptText() {
