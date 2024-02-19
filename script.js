@@ -1,6 +1,6 @@
-window.onload = function() {
-  toggleCopyButtonVisibility(); // Llamar a la función cuando se carga la página
-};
+/*window.onload = function() {
+  //toggleCopyButtonVisibility(); // Llamar a la función cuando se carga la página
+};*/
 
 function encryptText() {
   let textInput = document.getElementById("text-input").value;
@@ -65,17 +65,6 @@ function encryptText() {
   toggleCopyButtonVisibility();
 }
 
-function toggleCopyButtonVisibility() {
-  const copyButton = document.getElementById("copy-button");
-  const screenWidth = window.innerWidth;
-  const screenHeight = window.innerHeight;
-
-  if (screenWidth <= 768 && screenHeight <= 1174) {
-      copyButton.style.display = "block"; // Mostrar el botón de copiar
-  } else {
-      copyButton.style.display = "none"; // Ocultar el botón de copiar
-  }
-}
 
 function decryptText() {
   const textInput = document.getElementById("text-input").value.toLowerCase();
@@ -122,7 +111,7 @@ function decrypt(text) {
     .replace(/ufat/g, "u");
 }
 
-function copyToClipboard() {
+/*function copyToClipboard() {
   const resultTextArea = document.getElementById("result");
   resultTextArea.select();
   document.execCommand("copy");
@@ -134,7 +123,24 @@ function checkMediaQuery() {
   } else {
       document.getElementById("copy-button").style.display = "block";
   }
-}
+}*/
+
+// Función para verificar si se aplica la media query
+/*function checkMediaQuery() {
+  const copyButton = document.getElementById("copy-button");
+  const screenWidth = window.innerWidth;
+  const screenHeight = window.innerHeight;
+  
+  // Verificar si la pantalla está en modo completo
+  const isFullScreen = screenWidth === window.screen.width && screenHeight === window.screen.height;
+
+  if (isFullScreen || (screenWidth <= 768 && screenHeight <= 1174)) {
+      copyButton.style.display = "none";
+  } else {
+      copyButton.style.display = "block";
+  }
+}*/
+
 
 // Ejecutar la función al cargar la página y al cambiar el tamaño de la ventana
 window.onload = checkMediaQuery;
