@@ -237,7 +237,7 @@ footer p {
     }
 
     .right-half {
-        width: calc(100% - 80px);
+        width: 688px;
         padding: 0px 40px;
         height: 133px;
         background-color: #fff;
@@ -303,7 +303,7 @@ footer p {
         margin-top: 10px;
         margin-right: auto; /* Establecer margen derecho automático */
         margin-left: auto; /* Establecer margen izquierdo automático */
-        width: 95%;
+        width: 100%;
         display: block; /* Para que ocupe el ancho máximo disponible */
         transition: background-color 0.3s ease; /* Agregar transición */
     }
@@ -317,4 +317,116 @@ footer p {
     }
 }
 
+@media only screen and (max-width: 375px) and (max-height: 933px) {
+    .container {
+        flex-direction: column;
+        left: 24px;
+        padding: 32px;
+    }
 
+    h1 {
+        margin: 0; /* Elimina el margen para evitar espacio adicional */
+        color: rgb(212, 47, 193);
+        font-size: 20px;
+        flex: 1; /* Hace que el título ocupe el espacio restante */
+    }
+
+    /* Estilos para el lado izquierdo */
+    .left-half {
+    width: 100%; /* Restamos el ancho del right-half */
+    padding-right: 5px; /* Margen separado del right-half */
+}
+
+    .info {
+        font-size: 12px;
+        margin: 0;
+        padding-left: 10px;
+        margin-bottom: 5px;
+        margin-top: 50%;
+    } 
+
+    .container__boton {
+        width: 40%;
+        font-size: 12px;
+    }
+
+    #no-result-img {
+        height: 0%;
+    }
+
+    .right-half {
+        width: 327px;
+        padding: 32px;
+        height: 186px;
+        background-color: #fff;
+        border-radius: 24px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        display: flex; /* Añadido */
+        flex-direction: column; /* Añadido */
+        justify-content: flex-end; /* Añadido */
+        align-items: center; /* Añadido */
+    }
+
+    .right-half, #copy-button {
+        bottom: 90px;
+        left: 50px;
+        right: 50px;
+    }
+
+    .right-half, h2 {
+        position: fixed;
+        bottom: 152px;
+        left: 40px;
+        right: 40px;
+        width: calc(100% - 80px);
+        padding: 0px 0px 0px;
+    }
+
+    .right-half, h4 {
+        position: fixed;
+        bottom: 72px;
+        left: 40px;
+        width: calc(100% - 80px);
+        padding: 10px 0px 30px;
+    }
+
+    #resultado {
+        position: fixed;
+        bottom: 190px;
+        font-weight: bold;
+        margin-bottom: 10px; /* Añadido para separar el texto del cuadro de texto */
+    }
+
+    #result {
+        position: fixed;
+        bottom: 150px;
+        margin-right: 30%;
+        margin-left: 0%;
+        width: 70%;
+        box-sizing: border-box;
+        margin-bottom: 10px; /* Añadido para separar el cuadro de texto del botón */
+    }
+
+    #copy-button {
+        background-color: rgb(212, 47, 193);
+        color: white;
+        padding: 15px;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        margin-top: 10px;
+        margin-right: auto; /* Establecer margen derecho automático */
+        margin-left: auto; /* Establecer margen izquierdo automático */
+        width: 95%;
+        display: block; /* Para que ocupe el ancho máximo disponible */
+        transition: background-color 0.3s ease; /* Agregar transición */
+    }
+    
+    #copy-button:hover {
+        background-color: #9c27b0; /* Cambiar color al pasar el cursor */
+    }
+    
+    #copy-button {
+        display: none;
+    }
+}
