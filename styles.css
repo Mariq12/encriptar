@@ -25,7 +25,7 @@ body {
 
 .right-half {
     background-color: #fff;
-    padding: 10px 0px 30px;
+    padding: 10px 0px 40px;
     width: 400px; /* Ancho del right-half */
     margin-left: auto; /* Empujar al lado derecho */
     margin-right: 5px; /* Margen separado del contenedor principal */
@@ -201,7 +201,7 @@ p {
     margin-top: 10px;
     margin-right: auto; /* Establecer margen derecho automático */
     margin-left: auto; /* Establecer margen izquierdo automático */
-    width: 35%;
+    width: 55%;
     display: block; /* Para que ocupe el ancho máximo disponible */
     transition: background-color 0.3s ease; /* Agregar transición */
 }
@@ -332,8 +332,7 @@ footer p {
         cursor: pointer;
         margin-right: auto; /* Establecer margen derecho automático */
         margin-left: auto; /* Establecer margen izquierdo automático */
-
-        width: 100%;
+        width: 200px;
         display: block; /* Para que ocupe el ancho máximo disponible */
         transition: background-color 0.3s ease; /* Agregar transición */
     }
@@ -455,7 +454,7 @@ footer p {
         padding: 0px 0px 40px;
     }
     
-    .right-half, #copy-button {
+    .right-half {
         bottom: 90px;
         left: 50px;
         right: 50px;
@@ -468,11 +467,12 @@ footer p {
         border: none;
         border-radius: 10px;
         cursor: pointer;
-        margin-right: auto; /* Establecer margen derecho automático */
-        margin-left: auto; /* Establecer margen izquierdo automático */
-        width: 95%;
+        width: 220px;
         display: block; /* Para que ocupe el ancho máximo disponible */
         transition: background-color 0.3s ease; /* Agregar transición */
+        margin-right: auto; /* Establecer margen derecho automático */
+        margin-left: auto; /* Establecer margen izquierdo automático */
+        
     }
     
     #copy-button:hover {
