@@ -238,6 +238,17 @@ footer p {
         flex-direction: column;
     }
 
+    #text-input {
+        width: 70%; /* Ancho inicial del campo de entrada */
+        min-height: 90px; /* Altura mínima para evitar que el texto continúe en una sola línea */
+        padding: 8px;
+        border: none;
+        background-color: #f5cfd5;
+        color: rgb(212, 47, 193);
+        font-weight: bold;
+        resize: vertical; /* Esto permitirá que el cuadro de texto crezca en vertical */
+    }
+
     .info {
         font-size: 14px;
         margin: 0;
@@ -250,7 +261,7 @@ footer p {
         width: 688px;
         padding: 0px 40px;
         height: 133px;
-        background-color: #d81818;
+        background-color: #fff;
         border-radius: 32px;
         box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
         display: flex; 
