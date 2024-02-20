@@ -27,7 +27,7 @@ body {
 .right-half {
     background-color: #fff;
     padding: 10px 0px 30px;
-    width: 250px; /* Ancho del right-half */
+    width: 400px; /* Ancho del right-half */
     margin-left: auto; /* Empujar al lado derecho */
     margin-right: 5px; /* Margen separado del contenedor principal */
 }
@@ -78,12 +78,20 @@ input {
     font-weight: bold;
     
 }
+
 textarea {
     border: none;
 }
 
-.input-container input {
-    width: 70%; /* Ajusta el ancho del campo de entrada según sea necesario */
+#text-input {
+    width: 70%; /* Ancho inicial del campo de entrada */
+    min-height: 150px; /* Altura mínima para evitar que el texto continúe en una sola línea */
+    padding: 8px;
+    border: none;
+    background-color: #f5cfd5;
+    color: rgb(212, 47, 193);
+    font-weight: bold;
+    resize: vertical; /* Esto permitirá que el cuadro de texto crezca en vertical */
 }
 
 p {
@@ -101,7 +109,7 @@ p {
     margin: 0;
     padding-left: 10px; /* Ajusta el espacio a la izquierda del mensaje */
     margin-bottom: 5px; /* Ajusta el espacio inferior del mensaje */
-    margin-top: 45%; /* Ajusta el espacio superior del mensaje */
+    margin-top: 5%; /* Ajusta el espacio superior del mensaje */
 } 
 
 .container__boton {
@@ -164,10 +172,20 @@ p {
     overflow: hidden; /* Oculta el desbordamiento de la imagen */
 }
 
-#result {
-    height: 25px;
-    width: 100%;
+#resultado {
+    width: 336px;
     box-sizing: border-box;
+    margin-right: auto;
+    margin-left: auto;
+    font-weight: bold;
+}
+
+#result {
+    height: 60px;
+    width: 336px;
+    box-sizing: border-box;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 #result:empty + #no-result-img {
@@ -229,7 +247,7 @@ footer p {
         margin: 0;
         padding-left: 10px;
         margin-bottom: 5px;
-        margin-top: 20%;
+        margin-top: 10%;
     } 
 
     #no-result-img {
@@ -247,6 +265,7 @@ footer p {
         flex-direction: column; /* Añadido */
         justify-content: flex-end; /* Añadido */
         align-items: center; /* Añadido */
+        margin-top: 30px;
     }
 
     .right-half, #resultado, #result{
@@ -280,7 +299,9 @@ footer p {
         position: fixed;
         bottom: 190px;
         font-weight: bold;
-        margin-bottom: 10px; /* Añadido para separar el texto del cuadro de texto */
+        margin-bottom: 20px; /* Añadido para separar el texto del cuadro de texto */
+        margin-right: 5px;
+        margin-left: 5px;
     }
 
     #result {
@@ -290,19 +311,19 @@ footer p {
         margin-left: auto;
         width: 75%;
         box-sizing: border-box;
-        margin-bottom: 10px; /* Añadido para separar el cuadro de texto del botón */
+        margin-bottom: 0px; /* Añadido para separar el cuadro de texto del botón */
     }
 
     #copy-button {
         background-color: rgb(212, 47, 193);
         color: white;
-        padding: 10px 15px;
+        padding: 8px 15px;
         border: none;
         border-radius: 10px;
         cursor: pointer;
-        margin-top: 10px;
         margin-right: auto; /* Establecer margen derecho automático */
         margin-left: auto; /* Establecer margen izquierdo automático */
+
         width: 100%;
         display: block; /* Para que ocupe el ancho máximo disponible */
         transition: background-color 0.3s ease; /* Agregar transición */
