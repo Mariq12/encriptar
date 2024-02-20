@@ -1,5 +1,6 @@
 body {
-    background-color: #f5cfd5;
+    background: linear-gradient(to bottom right, #ffffff, #f5cfd5, #f582e7, #d42fc1);
+
     font-family: Arial, sans-serif;
     margin: 0;
 }
@@ -24,7 +25,7 @@ body {
 }
 
 .right-half {
-    background-color: #fff;
+    background-color: #f5cfd5;
     padding: 10px 0px 40px;
     width: 400px; /* Ancho del right-half */
     margin-left: auto; /* Empujar al lado derecho */
@@ -72,7 +73,7 @@ input {
     width: calc(100% - 16px);
     padding: 8px;
     border: none;
-    background-color: #f5cfd5;
+    background-color: none;
     color: rgb(212, 47, 193);
     font-weight: bold;
     
@@ -87,7 +88,7 @@ textarea {
     min-height: 150px; /* Altura mínima para evitar que el texto continúe en una sola línea */
     padding: 8px;
     border: none;
-    background-color: #f5cfd5;
+    background: linear-gradient(to bottom right, #ffffff, #f5cfd5, #f582e7, #d42fc1);
     color: rgb(212, 47, 193);
     font-weight: bold;
     resize: vertical; /* Esto permitirá que el cuadro de texto crezca en vertical */
@@ -176,19 +177,23 @@ p {
 }
 
 #no-result-img {
-    max-height: 25%; /* Ajusta según sea necesario */
+    max-height: 35%; /* Ajusta según sea necesario */
     display: none;
-    margin: 0 auto;
+    margin: 0px auto;
+    padding: 40px;
 }
 
 #no-result-text {
     font-size: 20px;
     text-align: center;
+    color:#d42fc1;
+    font-weight: bold;
 }
 
 #no-result-text-h4 {
     font-size: 14px;
     text-align: center;
+    color:#d42fc1
 }
 
 #copy-button {
@@ -234,6 +239,12 @@ footer p {
 
 /* Media queries para dispositivos Tablets */
 @media only screen and (max-width: 768px) and (max-height: 1174px) {
+    body {
+        background-color: #fff;
+        font-family: Arial, sans-serif;
+        margin: 0;
+    }
+    
     .container {
         flex-direction: column;
     }
@@ -243,7 +254,7 @@ footer p {
         min-height: 90px; /* Altura mínima para evitar que el texto continúe en una sola línea */
         padding: 8px;
         border: none;
-        background-color: #f5cfd5;
+        background-color: #fff;
         color: rgb(212, 47, 193);
         font-weight: bold;
         resize: vertical; /* Esto permitirá que el cuadro de texto crezca en vertical */
@@ -261,7 +272,7 @@ footer p {
         width: 688px;
         padding: 0px 40px;
         height: 133px;
-        background-color: #fff;
+        background-color: #f5cfd5;
         border-radius: 32px;
         box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
         display: flex; 
@@ -401,7 +412,7 @@ footer p {
         width: 327px;
         padding: 32px;
         height: 186px;
-        background-color: #fff;
+        background-color: rgb(255, 166, 245);
         border-radius: 24px;
         box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
         display: flex; /* Añadido */
@@ -484,3 +495,21 @@ footer p {
     }
 }
 
+/* Animaciones */
+@keyframes moveUpDown {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+#no-result-img {
+    max-width: 100px;
+    margin: 0 auto;
+    animation: moveUpDown 2s ease-in-out infinite;
+}
