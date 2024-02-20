@@ -250,10 +250,6 @@ footer p {
         margin-top: 10%;
     } 
 
-    #no-result-img {
-        height: 0%;
-    }
-
     .right-half {
         width: 688px;
         padding: 0px 40px;
@@ -279,22 +275,6 @@ footer p {
         right: 50px;
     }
 
-    .right-half, h2 {
-        position: fixed;
-        bottom: 142px;
-        left: 40px;
-        width: calc(100% - 80px);
-        padding: 0px 0px 0px;
-    }
-
-    .right-half, h4 {
-        position: fixed;
-        bottom: 72px;
-        left: 40px;
-        width: calc(100% - 80px);
-        padding: 10px 0px 30px;
-    }
-
     #resultado {
         position: fixed;
         bottom: 190px;
@@ -312,6 +292,26 @@ footer p {
         width: 75%;
         box-sizing: border-box;
         margin-bottom: 0px; /* Añadido para separar el cuadro de texto del botón */
+    }
+
+    #no-result-img {
+        height: 0%;
+    }
+
+    .right-half, h2 {
+        position: fixed;
+        bottom: 142px;
+        left: 40px;
+        width: calc(100% - 80px);
+        padding: 0px 0px 0px;
+    }
+
+    .right-half, h4 {
+        position: fixed;
+        bottom: 72px;
+        left: 40px;
+        width: calc(100% - 80px);
+        padding: 10px 0px 30px;
     }
 
     #copy-button {
@@ -339,17 +339,17 @@ footer p {
 }
 
 @media only screen and (max-width: 375px) and (max-height: 933px) {
-    .container {
-        flex-direction: column;
-        left: 24px;
-        padding: 32px;
-    }
-
     h1 {
         margin: 8px; /* Elimina el margen para evitar espacio adicional */
         color: rgb(212, 47, 193);
         font-size: 18px;
         flex: 1; /* Hace que el título ocupe el espacio restante */
+    }
+    
+    .container {
+        flex-direction: column;
+        left: 24px;
+        padding: 32px;
     }
 
     /* Estilos para el lado izquierdo */
@@ -388,10 +388,6 @@ footer p {
         margin-top: 10px; /* Añadido margen superior */
     }
 
-    #no-result-img {
-        height: 0%;
-    }
-
     .right-half {
         width: 327px;
         padding: 32px;
@@ -403,29 +399,8 @@ footer p {
         flex-direction: column; /* Añadido */
         justify-content: flex-end; /* Añadido */
         align-items: center; /* Añadido */
-    }
-
-    .right-half, #copy-button {
-        bottom: 90px;
-        left: 50px;
-        right: 50px;
-    }
-
-    .right-half, h2 {
-        position: fixed;
-        bottom: 152px;
-        left: 40px;
-        right: 40px;
-        width: calc(100% - 80px);
-        padding: 0px 0px 0px;
-    }
-
-    .right-half, h4 {
-        position: fixed;
-        bottom: 72px;
-        left: 40px;
-        width: calc(100% - 80px);
-        padding: 10px 0px 30px;
+        margin-right: 0px;
+        margin-left: 0px;
     }
 
     #resultado {
@@ -443,6 +418,33 @@ footer p {
         width: 70%;
         box-sizing: border-box;
         margin-bottom: 20px; /* Añadido para separar el cuadro de texto del botón */
+    }
+
+    #no-result-img {
+        height: 0%;
+    }
+
+    .right-half, h2 {
+        position: fixed;
+        bottom: 152px;
+        left: 40px;
+        right: 40px;
+        width: calc(100% - 80px);
+        padding: 0px 0px 40px;
+    }
+
+    .right-half, h4 {
+        position: fixed;
+        bottom: 72px;
+        left: 50px;
+        width: calc(100% - 80px);
+        padding: 0px 0px 40px;
+    }
+    
+    .right-half, #copy-button {
+        bottom: 90px;
+        left: 50px;
+        right: 50px;
     }
 
     #copy-button {
