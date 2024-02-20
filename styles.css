@@ -151,22 +151,6 @@ p {
     margin-top: 10px; /* Ajusta según sea necesario */
 }
 
-#no-result-img {
-    max-height: 25%; /* Ajusta según sea necesario */
-    display: none;
-    margin: 0 auto;
-}
-
-#no-result-text {
-    font-size: 20px;
-    text-align: center;
-}
-
-#no-result-text-h4 {
-    font-size: 14px;
-    text-align: center;
-}
-
 #result-container {
     position: relative;
     overflow: hidden; /* Oculta el desbordamiento de la imagen */
@@ -193,7 +177,23 @@ p {
 }
 
 #no-result-img {
+    max-height: 25%; /* Ajusta según sea necesario */
+    display: none;
+    margin: 0 auto;
+}
+
+#no-result-img {
     display: block;
+}
+
+#no-result-text {
+    font-size: 20px;
+    text-align: center;
+}
+
+#no-result-text-h4 {
+    font-size: 14px;
+    text-align: center;
 }
 
 #copy-button {
