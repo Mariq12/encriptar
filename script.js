@@ -23,11 +23,11 @@ function encryptText() {
   }
 
   // Verificar si hay caracteres especiales en el texto
-  if (/[^a-zA-Z0-9\s]/.test(textInput)) {
+  /*if (/[^a-zA-Z0-9\s]/.test(textInput)) {
     alert("No deben ser utilizados caracteres especiales.");
     document.getElementById("text-input").value = ""; // Borrar el contenido del cuadro de texto
     return;
-  }
+  }*/
 
   // Verificar si hay mayúsculas en el texto
   if (/[A-Z]/.test(textInput)) {
