@@ -346,9 +346,9 @@ footer p {
     }
 
     h1 {
-        margin: 0; /* Elimina el margen para evitar espacio adicional */
+        margin: 8px; /* Elimina el margen para evitar espacio adicional */
         color: rgb(212, 47, 193);
-        font-size: 20px;
+        font-size: 18px;
         flex: 1; /* Hace que el título ocupe el espacio restante */
     }
 
@@ -363,12 +363,29 @@ footer p {
         margin: 0;
         padding-left: 10px;
         margin-bottom: 5px;
-        margin-top: 50%;
+        margin-top: 20%;
     } 
 
     .container__boton {
-        width: 40%;
-        font-size: 12px;
+        background-color: rgb(212, 47, 193);
+        color: white;
+        padding: 10px;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        width: 95%;
+        display: block;
+        transition: background-color 0.3s ease;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .container__boton:hover {
+        background-color: #9c27b0;
+    }
+
+    #desencriptar {
+        margin-top: 10px; /* Añadido margen superior */
     }
 
     #no-result-img {
@@ -450,3 +467,4 @@ footer p {
         display: none;
     }
 }
+
