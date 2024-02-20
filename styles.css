@@ -299,6 +299,8 @@ footer p {
         width: 75%;
         box-sizing: border-box;
         margin-bottom: 0px; /* Añadido para separar el cuadro de texto del botón */
+        margin-right: 5px;
+        margin-left: 5px;
     }
 
     #no-result-img {
