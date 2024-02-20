@@ -170,6 +170,7 @@ p {
     box-sizing: border-box;
     margin-right: auto;
     margin-left: auto;
+    background-color: #f5cfd5;;
 }
 
 #result:empty + #no-result-img {
