@@ -413,9 +413,11 @@ footer p {
 
     #resultado {
         position: fixed;
-        bottom: 240px;
+        bottom: 270px;
         font-weight: bold;
         margin-bottom: 10px; /* Añadido para separar el texto del cuadro de texto */
+        margin-right: 10px;
+        margin-left: 10px;
     }
 
     #result {
@@ -426,6 +428,8 @@ footer p {
         width: 70%;
         box-sizing: border-box;
         margin-bottom: 20px; /* Añadido para separar el cuadro de texto del botón */
+        margin-right: 10px;
+        margin-left: 10px;    
     }
 
     #no-result-img {
