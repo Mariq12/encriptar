@@ -23,7 +23,6 @@ body {
     padding-right: 5px; /* Margen separado del right-half */
 }
 
-
 .right-half {
     background-color: #fff;
     padding: 10px 0px 30px;
@@ -233,6 +232,7 @@ footer p {
     margin-top: 20px;
 }
 
+/* Media queries para dispositivos Tablets */
 @media only screen and (max-width: 768px) and (max-height: 1174px) {
     .container {
         flex-direction: column;
@@ -253,10 +253,10 @@ footer p {
         background-color: #fff;
         border-radius: 32px;
         box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-        display: flex; /* Añadido */
-        flex-direction: column; /* Añadido */
-        justify-content: flex-end; /* Añadido */
-        align-items: center; /* Añadido */
+        display: flex; 
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center;
         margin-top: 30px;
     }
 
@@ -334,6 +334,7 @@ footer p {
     }
 }
 
+/* Media queries para dispositivos Celulares */
 @media only screen and (max-width: 375px) and (max-height: 933px) {
     h1 {
         margin: 8px; /* Elimina el margen para evitar espacio adicional */

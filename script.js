@@ -1,7 +1,3 @@
-/*window.onload = function() {
-  //toggleCopyButtonVisibility(); // Llamar a la función cuando se carga la página
-};*/
-
 function encryptText() {
   let textInput = document.getElementById("text-input").value;
 
@@ -21,13 +17,6 @@ function encryptText() {
       return; // Salir de la función si el usuario no desea modificar el texto
     }
   }
-
-  // Verificar si hay caracteres especiales en el texto
-  /*if (/[^a-zA-Z0-9\s]/.test(textInput)) {
-    alert("No deben ser utilizados caracteres especiales.");
-    document.getElementById("text-input").value = ""; // Borrar el contenido del cuadro de texto
-    return;
-  }*/
 
   // Verificar si hay mayúsculas en el texto
   if (/[A-Z]/.test(textInput)) {
@@ -65,12 +54,10 @@ function encryptText() {
   toggleCopyButtonVisibility();
 }
 
-
 function decryptText() {
   const textInput = document.getElementById("text-input").value.toLowerCase();
   let result = decrypt(textInput);
   document.getElementById("result").value = result;
-
   // Mostrar el resultado y ocultar la imagen y los textos
   mostrarResultado();
 }
@@ -118,42 +105,9 @@ function copyToClipboard() {
   alert("Texto copiado al portapapeles.");
 }
 
-
-/*function copyToClipboard() {
-  const resultTextArea = document.getElementById("result");
-  resultTextArea.select();
-  document.execCommand("copy");
-}
-// Función para verificar si se aplica la media query
-function checkMediaQuery() {
-  if (window.matchMedia("(max-width: 768px) and (max-height: 1174px)").matches) {
-      document.getElementById("copy-button").style.display = "none";
-  } else {
-      document.getElementById("copy-button").style.display = "block";
-  }
-}*/
-
-// Función para verificar si se aplica la media query
-/*function checkMediaQuery() {
-  const copyButton = document.getElementById("copy-button");
-  const screenWidth = window.innerWidth;
-  const screenHeight = window.innerHeight;
-  
-  // Verificar si la pantalla está en modo completo
-  const isFullScreen = screenWidth === window.screen.width && screenHeight === window.screen.height;
-
-  if (isFullScreen || (screenWidth <= 768 && screenHeight <= 1174)) {
-      copyButton.style.display = "none";
-  } else {
-      copyButton.style.display = "block";
-  }
-}*/
-
-
 // Ejecutar la función al cargar la página y al cambiar el tamaño de la ventana
 window.onload = checkMediaQuery;
 window.addEventListener("resize", checkMediaQuery);
-
 
 function mostrarResultado() {
   // Ocultar la imagen y los textos
