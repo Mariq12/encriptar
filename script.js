@@ -111,6 +111,14 @@ function decrypt(text) {
     .replace(/ufat/g, "u");
 }
 
+function copyToClipboard() {
+  const resultTextArea = document.getElementById("result");
+  resultTextArea.select();
+  document.execCommand("copy");
+  alert("Texto copiado al portapapeles.");
+}
+
+
 /*function copyToClipboard() {
   const resultTextArea = document.getElementById("result");
   resultTextArea.select();
